@@ -4,7 +4,9 @@
     {
         Default,
         Path,
+        Paths,
         Folder,
+        Folders,
         Enumerable
     }
 }
