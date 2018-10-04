@@ -41,7 +41,13 @@ namespace H.NET.Utilities
             {
                 if (!(key?.GetValue(name) is string value))
                 {
-                    return null;
+                    Set(fileName, true);
+                    value = key?.GetValue(name) as string;
+
+                    if (value is null)
+                    {
+                        return null;
+                    }
                 }
 
                 return ToFilePath(value);
